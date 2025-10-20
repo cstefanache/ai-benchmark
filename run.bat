@@ -49,5 +49,12 @@ echo.
 
 REM Run the application
 python app.py
+if errorlevel 1 (
+    echo.
+    echo Error: Application failed to start
+    echo Please check the error messages above
+    pause
+    exit /b 1
+)
 
 pause

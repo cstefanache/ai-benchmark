@@ -53,3 +53,11 @@ echo ""
 
 # Run the application
 $PYTHON app.py
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+    echo ""
+    echo "Error: Application failed to start (exit code: $EXIT_CODE)"
+    echo "Please check the error messages above"
+    exit $EXIT_CODE
+fi
